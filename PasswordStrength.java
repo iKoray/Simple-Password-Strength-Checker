@@ -8,6 +8,11 @@ public class PasswordStrength {
             System.out.print("Enter password: ");
             String password = sc.nextLine();
 
+            if (password.contains(" ")) { //checks for space
+                System.out.println("Password should not contain spaces.");
+                continue; // Restart the loop and ask for password input again
+            }
+
             if (password.length() < 8) { // Check password length of at least 8
                 System.out.println("Password should be at least 8 characters long.");
             } else {
@@ -15,6 +20,8 @@ public class PasswordStrength {
                 boolean hasLower = false;
                 boolean hasDigit = false;
                 boolean hasSpecial = false;
+                boolean hasSpace = false;
+
 
                 // Defines the allowed special characters
                 String specialCharacters = "~!#@$%^&*_-+=`|\\(){}[]:;\"'<>,.?/";
