@@ -13,6 +13,11 @@ public class PasswordStrength {
                 continue;
             }
 
+            //loop to check for common words, will expand on this to cover all common words
+            if (password.contains("password")) {
+                System.out.println("Password should not contain common words.");
+            }
+
             if (password.length() < 8) { // Check password length of at least 8
                 System.out.println("Password should be at least 8 characters long.");
             } else {
