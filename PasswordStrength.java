@@ -8,9 +8,9 @@ public class PasswordStrength {
             System.out.print("Enter password: ");
             String password = sc.nextLine();
 
-            if (password.contains(" ")) { //checks for space
+            if (password.contains(" ")) { //checks for space in user input
                 System.out.println("Password should not contain spaces.");
-                continue; // Restart the loop and ask for password input again
+                continue;
             }
 
             if (password.length() < 8) { // Check password length of at least 8
